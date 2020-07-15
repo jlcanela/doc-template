@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "doc": "puml generate doc/*  -o out/architecture.png",
+    "doc": "rm -rf out && mkdir out && cd doc && for file in *.puml; do puml generate $file -o ../out/$file.png; done && cd ..",
+    "docM3":"for %i in doc/*.puml   -o out/architecture.png",
     "doc2": "puml generate --unicode --text \"A -> B: Hello\""
   },
   "author": "",
