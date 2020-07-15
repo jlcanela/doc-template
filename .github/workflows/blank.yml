@@ -29,7 +29,3 @@ jobs:
     - name: Generate documentation
       run: npm run doc
       
-    - uses: ncipollo/release-action@v1
-      with:
-        artifacts: "out/*.png"
-        token: ${{ secrets.GITHUB_TOKEN }}
